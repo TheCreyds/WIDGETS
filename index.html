@@ -103,7 +103,7 @@ function loadSong(index, autoplay = false) {
   const list = validSongs();
   if (!list.length) {
     songName.textContent = "Añade los enlaces de las canciones";
-    songCount.textContent = "Creyds Playlist · 00 / 00";
+    songCount.textContent = "NOIR · 00 / 00";
     return;
   }
 
@@ -116,7 +116,7 @@ function loadSong(index, autoplay = false) {
 
   songName.textContent = song.title;
   songCount.textContent =
-    `Creyds Playlist · ${String(current + 1).padStart(2, "0")} / ${String(list.length).padStart(2, "0")}`;
+    `NOIR · ${String(current + 1).padStart(2, "0")} / ${String(list.length).padStart(2, "0")}`;
   toggle.textContent = "▶";
   seek.value = 0;
   elapsed.textContent = "0:00";
@@ -143,7 +143,7 @@ toggle.addEventListener("click", () => {
       loadSong(current, true);
     } else {
       audio.play().then(() => {
-        toggle.textContent = "Ⅱ";
+        toggle.textContent = "II";
       }).catch(() => {
         songName.textContent = "No se pudo cargar la canción";
       });
